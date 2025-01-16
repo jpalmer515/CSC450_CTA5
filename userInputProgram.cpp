@@ -17,18 +17,24 @@ void fileInput(const std::string adminMsg) {
     fio.seekg(0, std::ios::beg);
 
     //A while loop to print the file to the console, confirming the user input worked
-    while (fio.good()) {
-        std::cout << inputString;
+    // while (fio.good()) {
+    //     std::cout << inputString;
+    // }
+    std::string fileText;
+    std::fstream readFio;
+    while (getline (readFio, fileText)) {
+        std::cout << fileText;
     }
     fio.close();
 }
 
-void textReverse(std::string userInputs) {
-
-}
+// void textReverse() {
+//
+// }
 
 int main() {
 
-    fileInput("Please enter a string to be added to the text file. ");
+    fileInput("Please enter a string to be added to the text file. \n");
+    //textReverse();
 
 }
